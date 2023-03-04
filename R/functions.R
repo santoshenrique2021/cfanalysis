@@ -1,18 +1,40 @@
 #Step 3 - Functions
+# library(dplyr)      #Data manipulation 
+# library(ggplot2)    #Graphics 
+# library(tibble)     #Modern data frame 
+# library(readxl)     #Open an Excel file
 
-## 1 - Levels of the categorical variable
-all_leves <- function(dataset, col_name) {
+#' all_levels
+#'
+#' @param dataset the dataset you wish to retrieve levels for
+#' @param col_name the column name you wish to retrieve levels for
+#'
+#' @return returns levels of a categorical variable
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' all_levels(dataset = soccer, col_name = result_19_20)}
+all_levels <- function(dataset, col_name) {
   col_name <- dplyr::enquo(col_name)
   
   dataset |> dplyr::group_by(!!col_name) |>
-    dplyr::summarise(n = n()) |>
+    dplyr::summarise(n = dplyr::n()) |>
     dplyr::select(-2) |>
     dplyr::rename(values = !!col_name)
 }
 
-all_leves(dataset = df, col_name = result_19_20)
-
-## 2 - Absolute frequency
+#' ab_fr
+#'
+#' @param dataset the dataset for which you wish to retrieve absolute frequency.
+#' @param col_name the column name for which you wish to retrieve absolute frequency.
+#'
+#' @return returns the absolute frequency for a specified column.
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' ab_fr(dataset = soccer, col_name =  result_19_20)}
 ab_fr <- function(dataset, col_name) {
   col_name <- dplyr::enquo(col_name)
   dataset |>
@@ -20,7 +42,7 @@ ab_fr <- function(dataset, col_name) {
     dplyr::summarise(absolute_frequency = n())
 }
 
-ab_fr(dataset = df, col_name =  result_19_20)
+
 
 ## 3 - Relative frequency
 re_fr <- function(dataset, col_name) {
