@@ -72,7 +72,7 @@ re_fr <- function(dataset, col_name) {
 #'
 #' @examples
 #' \dontrun{
-#' full_fr(dataset = df, col_name = result_19_20)}
+#' full_fr(dataset = soccer, col_name = result_19_20)}
 full_fr <- function(dataset, col_name) {
   col_name <- dplyr::enquo(col_name)
   dataset |>
