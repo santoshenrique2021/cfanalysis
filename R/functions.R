@@ -53,13 +53,14 @@ ab_fr <- function(dataset, col_name) {
 #' @examples
 #' \dontrun{
 #' re_fr(dataset = soccer, col_name =  result_19_20)}
+
 re_fr <- function(dataset, col_name) {
   col_name <- dplyr::enquo(col_name)
   dataset |>
     dplyr::group_by(!!col_name) |>
-    dplyr::summarise(total = dplyr::n()) |>
-    dplyr::mutate (relative_frequency = round(100 * (total / sum(total)), 2)) |>
-    dplyr::select(!!col_name, relative_frequency)
+    dplyr::summarise("total" = dplyr::n()) |>
+    dplyr::mutate("relative_frequency" = round(100 * (total / sum(total)), 2)) |>
+    dplyr::select(!!col_name, "relative_frequency")
 }
 
 #' full_fr
@@ -77,8 +78,8 @@ full_fr <- function(dataset, col_name) {
   col_name <- dplyr::enquo(col_name)
   dataset |>
     dplyr::group_by(!!col_name) |>
-    dplyr::summarise(absolute_frequency = dplyr::n()) |>
-    dplyr::mutate(relative_frequency = round(100 * (
+    dplyr::summarise("absolute_frequency" = dplyr::n()) |>
+    dplyr::mutate("relative_frequency" = round(100 * (
       absolute_frequency / sum(absolute_frequency)
     ), 2))
 }
@@ -166,9 +167,9 @@ co_rl_fr <- function(dataset, col_name_1, col_name_2) {
 #'
 #' @examples
 #' \dontrun{
-#'plot_bar(dataset = df,
-#'         col_name_1 = result_19_20,
-#'         col_name_2 = result_20_21)}
+#'plot_bar(dataset = soccer,
+#'        col_name_1 = result_19_20,
+#'        col_name_2 = result_20_21)}
 plot_bar <- function(dataset, col_name_1, col_name_2) {
   col_name_1 <- dplyr::enquo(col_name_1)
   col_name_2 <- dplyr::enquo(col_name_2)
@@ -186,8 +187,8 @@ plot_bar <- function(dataset, col_name_1, col_name_2) {
     ggplot2::ggtitle("Comparison of the variable in different moments") +
     ggplot2::theme(
       plot.title = ggplot2::element_text(size = 12, face = "bold.italic"),
-      axis.title.y = element_blank(),
-      axis.title.x = element_text(size = 10, face = "bold")
+      axis.title.y = ggplot2::element_blank(),
+      axis.title.x = ggplot2::element_text(size = 10, face = "bold")
     ) +
     ggplot2::coord_flip() +
     ggplot2::stat_count(geom = 'text',
@@ -210,9 +211,9 @@ plot_bar <- function(dataset, col_name_1, col_name_2) {
 #'
 #' @examples
 #' \dontrun{
-#'tv_d(dataset = df,
-#'     col_name_1 = result_19_20,
-#'     col_name_2 = result_20_21)}
+#'tv_d(dataset = soccer,
+#'    col_name_1 = result_19_20,
+#'    col_name_2 = result_20_21)}
 tv_d <- function(dataset, col_name_1, col_name_2) {
   col_name_1 <- dplyr::enquo(col_name_1)
   col_name_2 <- dplyr::enquo(col_name_2)
@@ -222,6 +223,6 @@ tv_d <- function(dataset, col_name_1, col_name_2) {
     sapply(function(x)
       round(table(x) * 100 / nrow(dataset), 2)) |>
     tibble::as_tibble() |>
-    dplyr::mutate(dif_abs = abs(!!col_name_1-!!col_name_2)) |>
+    dplyr::mutate("dif_abs" = abs(!!col_name_1-!!col_name_2)) |>
     dplyr::summarise(tv = sum(dif_abs) / 2)
 }

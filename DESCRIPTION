@@ -1,12 +1,16 @@
 Package: cfanalysis
 Type: Package
-Title: What the Package Does (Title Case)
+Title: An R Package to Analyze Categorical Features and Their Long-Term Stability.
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Henrique Santos
+Maintainer: Trevor French <yourself@somewhere.net>
+Description: An R package to analyze categorical features and their long-term 
+    stability.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Imports:
+        dplyr,
+        ggplot2,
+        tibble
 RoxygenNote: 7.2.1
