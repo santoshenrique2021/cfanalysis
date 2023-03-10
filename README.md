@@ -1,4 +1,4 @@
-<a href='https://github.com/santoshenrique2021/cfanalysis'><img src='https://github.com/santoshenrique2021/cfanalysis/tree/main/man/figures/cfanalysis-cropped.png' align="right" height="300" /></a>
+<a href='https://github.com/santoshenrique2021/cfanalysis'><img src='https://raw.githubusercontent.com/santoshenrique2021/cfanalysis/main/man/figures/cfanalysis-cropped.png' align="right" height="300" /></a>
 
 # cfanalysis
 
