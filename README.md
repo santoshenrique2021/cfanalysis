@@ -1,3 +1,5 @@
+<a href='https://github.com/santoshenrique2021/cfanalysis'><img src='https://github.com/santoshenrique2021/cfanalysis/tree/main/man/figures/cfanalysis-cropped.png' align="right" height="300" /></a>
+
 # cfanalysis
 
 An R package to analyze categorical features and their long-term stability.
@@ -43,8 +45,7 @@ Document Functions: 'devtools::document()'
 
 ## 📃 LICENSE
 
-MIT License
-Copyright (c) 2023 Henrique Santos
+MIT License Copyright (c) 2023 Henrique Santos
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
