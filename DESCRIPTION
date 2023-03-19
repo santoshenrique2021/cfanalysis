@@ -1,11 +1,10 @@
 Package: cfanalysis
 Type: Package
-Title: An R Package to Analyze Categorical Features and Their Long-Term Stability.
-Version: 0.1.0
-Author: Henrique Santos
-Maintainer: Trevor French <yourself@somewhere.net>
-Description: An R package to analyze categorical features and their long-term 
-    stability.
+Title: Analyze in a brilliant, practical, easy, and fancy way categorical variables
+Version: 1.0.0
+Author: Henrique Santos <santos.henrique624@gmail.com>
+Maintainer: Trevor French 
+Description: This package presents a set of functions that analyze the statistical properties of the categorical feature, including its long-term stability under the total variation metric. 
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
