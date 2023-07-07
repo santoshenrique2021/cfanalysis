@@ -19,5 +19,5 @@ full_fr
 }
 \examples{
 \dontrun{
-full_fr(dataset = df, col_name = result_19_20)}
+full_fr(dataset = soccer, col_name = result_19_20)}
 }

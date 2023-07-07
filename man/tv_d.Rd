@@ -7,13 +7,13 @@
 tv_d(dataset, col_name_1, col_name_2)
 }
 \arguments{
-\item{dataset}{the dataset for which you wish to retrieve the total variation 
+\item{dataset}{the dataset for which you wish to retrieve the total variation
 distance.}
 
-\item{col_name_1}{the first column name for which you wish to retrieve the 
+\item{col_name_1}{the first column name for which you wish to retrieve the
 total variation distance.}
 
-\item{col_name_2}{the second column name for which you wish to retrieve the 
+\item{col_name_2}{the second column name for which you wish to retrieve the
 total variation distance.}
 }
 \value{
@@ -24,7 +24,7 @@ tv_d
 }
 \examples{
 \dontrun{
-tv_d(dataset = df,
-    col_name_1 = result_19_20,
-    col_name_2 = result_20_21)}
+tv_d(dataset = soccer,
+   col_name_1 = result_19_20,
+   col_name_2 = result_20_21)}
 }
