@@ -7,17 +7,17 @@
 co_rl_fr(dataset, col_name_1, col_name_2)
 }
 \arguments{
-\item{dataset}{the dataset for which you wish to retrieve comparative 
+\item{dataset}{the dataset for which you wish to retrieve comparative
 relative frequency.}
 
-\item{col_name_1}{the first column name for which you wish to retrieve 
+\item{col_name_1}{the first column name for which you wish to retrieve
 comparative relative frequency.}
 
-\item{col_name_2}{the second column name for which you wish to retrieve 
+\item{col_name_2}{the second column name for which you wish to retrieve
 comparative relative frequency.}
 }
 \value{
-returns the comparative of the relative frequency for the a variable 
+returns the comparative of the relative frequency for the a variable
 in different moments.
 }
 \description{

@@ -24,6 +24,27 @@ all_levels <- function(dataset, col_name) {
     dplyr::rename(values = !!col_name)
 }
 
+#' cv_mode
+#'
+#' @param dataset the dataset for which you wish to retrieve the modes\
+#' @param col_name the column name for which you wish to retrieve the mode
+#'
+#' @return returns levels of a categorical variable
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' cv_mode(dataset = soccer, col_name = result_19_20)}
+cv_mode<- function(dataset, col_name){
+  col_name <- dplyr::enquo(col_name)
+  
+  dataset |> dplyr::group_by(!!col_name) |> 
+    dplyr::summarise(n = n()) |> 
+    dplyr::filter(n == max(n)) |> 
+    dplyr::select(-2) |> 
+    dplyr::rename(values = !!col_name)
+}
+
 #' ab_fr
 #'
 #' @param dataset the dataset for which you wish to retrieve absolute frequency.

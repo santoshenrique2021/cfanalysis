@@ -9,10 +9,10 @@ plot_bar(dataset, col_name_1, col_name_2)
 \arguments{
 \item{dataset}{the dataset for which you wish to retrieve the bar plot.}
 
-\item{col_name_1}{the first column name for which you wish to retrieve the 
+\item{col_name_1}{the first column name for which you wish to retrieve the
 bar plot.}
 
-\item{col_name_2}{the second column name for which you wish to retrieve the 
+\item{col_name_2}{the second column name for which you wish to retrieve the
 bar plot.}
 }
 \value{
@@ -23,7 +23,7 @@ plot_bar
 }
 \examples{
 \dontrun{
-plot_bar(dataset = df,
-        col_name_1 = result_19_20,
-        col_name_2 = result_20_21)}
+plot_bar(dataset = soccer,
+       col_name_1 = result_19_20,
+       col_name_2 = result_20_21)}
 }
