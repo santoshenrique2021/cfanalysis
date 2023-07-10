@@ -3,7 +3,7 @@ Type: Package
 Title: Analyze in a brilliant, practical, easy, and fancy way categorical variables
 Version: 1.0.0
 Author: Henrique Santos <santos.henrique624@gmail.com>
-Maintainer: Trevor French 
+Maintainer: Trevor French <frenchtrevor@outlook.com>
 Description: This package presents a set of functions that analyze the statistical properties of the categorical feature, including its long-term stability under the total variation metric. 
 License: MIT + file LICENSE
 Encoding: UTF-8
