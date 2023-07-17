@@ -39,7 +39,7 @@ cv_mode<- function(dataset, col_name){
   col_name <- dplyr::enquo(col_name)
   
   dataset |> dplyr::group_by(!!col_name) |> 
-    dplyr::summarise(n = n()) |> 
+    dplyr::summarise(n = dplyr::n()) |> 
     dplyr::filter(n == max(n)) |> 
     dplyr::select(-2) |> 
     dplyr::rename(values = !!col_name)
